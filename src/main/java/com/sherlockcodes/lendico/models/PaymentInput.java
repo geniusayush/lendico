@@ -11,11 +11,11 @@ public class PaymentInput {
 
     public PaymentInput(PaymentDTO dto) {
 
-        duration = Long.parseLong(dto.getDuration());
+        duration = dto.getDuration();
         loanAmount = Double.parseDouble(dto.getLoanAmount());
-        startDate = ZonedDateTime.parse(dto.getStartDat()).toLocalDateTime();
+        startDate = ZonedDateTime.parse(dto.getStartDate()).toLocalDateTime();
         monthlyRate = Double.parseDouble(dto.getNominalRate()) / 12 / 100.00;
-        if (loanAmount <= 0 || monthlyRate <= 0 || duration <= 0) throw new IllegalArgumentException();
+
     }
 
     public double getLoanAmount() {

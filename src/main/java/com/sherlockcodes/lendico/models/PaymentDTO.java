@@ -1,10 +1,20 @@
 package com.sherlockcodes.lendico.models;
 
 public class PaymentDTO {
-    String loanAmount;
-    String nominalRate;
-    String duration;
-    String startDat;
+    private String loanAmount;
+    private String nominalRate;
+    private Integer duration;
+    private String startDate;
+
+    public PaymentDTO() {
+    }
+
+    public PaymentDTO(String loanAmount, String nominalRate, Integer duration, String startDate) {
+        this.loanAmount = loanAmount;
+        this.nominalRate = nominalRate;
+        this.duration = duration;
+        this.startDate = startDate;
+    }
 
     public String getLoanAmount() {
         return loanAmount;
@@ -22,20 +32,20 @@ public class PaymentDTO {
         this.nominalRate = nominalRate;
     }
 
-    public String getDuration() {
+    public Integer getDuration() {
         return duration;
     }
 
-    public void setDuration(String duration) {
+    public void setDuration(Integer duration) {
         this.duration = duration;
     }
 
-    public String getStartDat() {
-        return startDat;
+    public String getStartDate() {
+        return startDate;
     }
 
-    public void setStartDat(String startDat) {
-        this.startDat = startDat;
+    public void setStartDate(String startDate) {
+        this.startDate = startDate;
     }
 }
 
